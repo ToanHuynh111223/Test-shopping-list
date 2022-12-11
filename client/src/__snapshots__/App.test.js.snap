@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot testing snapshot for App component 1`] = `
+<div
+  className="app-background"
+>
+  <div
+    className="main-container"
+  >
+    <div
+      className="add-item-box"
+    >
+      <input
+        className="add-item-input"
+        onChange={[Function]}
+        placeholder="Add an item..."
+        value=""
+      />
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall css-vi3ock-MuiButtonBase-root-MuiButton-root"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onContextMenu={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        add
+      </button>
+    </div>
+    <div
+      className="list-container"
+    >
+      <ul
+        className="list-shopping"
+      />
+    </div>
+    <div
+      className="total"
+    >
+      Total: 
+      0
+    </div>
+  </div>
+</div>
+`;
