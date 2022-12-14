@@ -16,6 +16,14 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    position: relative;
+
+    .message {
+        position: absolute;
+        top: 30px;
+        right: 0;
+        display: none;
+    }
 }
 
 .main-container {
