@@ -30,7 +30,7 @@ function postData(data) {
 function App() {
   let [newItemValue, setNewItemValue] = useState('')
   const [shoppingList, setShoppingList] = useState([])
-  const [totalItem, setTotalItem] = useState(0)
+  const [totalItem, setTotalItem] = useState()
   const alert = useRef()
   //get data
   useEffect(() => {
@@ -69,6 +69,7 @@ function App() {
       setShoppingList(newItems)
       setNewItemValue('')
       postData(newItem)
+      // close alert
       alert.current.style.display = 'none'
     }
 
@@ -105,9 +106,9 @@ function App() {
       </Alert>
       <div className='main-container'>
         <form className='add-item-box' >
-          <input className='add-item-input' placeholder='Add an item...' value={newItemValue} onChange={(e) => { setNewItemValue(e.target.value) }} />
+          <input id='add-item-input' placeholder='Add an item...' value={newItemValue} onChange={(e) => { setNewItemValue(e.target.value) }} />
           <ThemeProvider theme={theme}>
-            <Button variant="contained" size="small" color="primary" onClick={onAddClick} >add</Button>
+            <Button variant="contained" size="small" color="primary" onClick={onAddClick} id="btn-add">add</Button>
           </ThemeProvider>
         </form>
         <div className='list-container'>
@@ -117,11 +118,11 @@ function App() {
                 return (<li className='item-name' key={index} >
                   {item.isSelected ? (<span className='complete' onClick={() => toggleComplete(index)}>{item.itemName}</span>) : (<span onClick={() => toggleComplete(index)}>{item.itemName}</span>)}
                   <div className='quantity'>
-                    <button onClick={() => handleDecreaseQuantum(index)}>
+                    <button id='btn-decrease' onClick={() => handleDecreaseQuantum(index)}>
                       -
                     </button>
-                    <span> {item.quantity} </span>
-                    <button onClick={() => handleIncreaseQuantum(index)}>
+                    <span id='number'> {item.quantity} </span>
+                    <button id='btn-increase' onClick={() => handleIncreaseQuantum(index)}>
                       +
                     </button>
                   </div>
